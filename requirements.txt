@@ -1,0 +1,10 @@
+aio-pika==9.5.4
+aiosqlite==0.20.0
+environs==14.1.0
+fastapi==0.115.7
+httpx==0.28.1
+loguru==0.7.3
+pytest==8.3.4
+pytest-asyncio==0.25.2
+SQLAlchemy==2.0.37
+uvicorn==0.34.0

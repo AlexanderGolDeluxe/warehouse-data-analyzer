@@ -1,0 +1,8 @@
+.env.dist
+.pytest_cache
+.venv
+.vscode
+app/db
+app/logs
+app/configuration/nginx
+**/__pycache__
