@@ -12,13 +12,12 @@ class RabbitMQHelper:
 
     async def __set_connection(self):
         try:
-            self.connection = await aio_pika.connect(
+            self.connection = await aio_pika.connect_robust(
                 self.__rmq_url
             )
             logger.info("RabbitMQ connect successfully")
         except AMQPConnectionError as e:
-            logger.critical(
-                f"RabbitMQ connection error: {e}. {RMQ_URL=}")
+            logger.critical(f"RabbitMQ connection error: {e}")
 
     async def __set_channel(self):
         self.channel = await self.connection.channel()

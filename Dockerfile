@@ -14,5 +14,5 @@ RUN bash -c "source .venv/bin/activate && \
 
 COPY . .
 
-CMD [ "bash", "-c", "source .venv/bin/activate && \
+CMD [ "bash", "-c", "sleep 10 && source .venv/bin/activate && \
     uvicorn app:create_app --reload --host=0.0.0.0 --port=8000" ]
